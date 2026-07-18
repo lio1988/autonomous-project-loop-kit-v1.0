@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "project_name": "Loop Self Test",
+  "project_goal": "Prove task execution, verification, and completion audits.",
+  "tasks": [
+    {
+      "id": "TEST-001",
+      "title": "Write first marker",
+      "description": "Append the selected task ID to sample.txt.",
+      "kind": "implementation",
+      "priority": 1,
+      "status": "READY",
+      "dependencies": [],
+      "required": true,
+      "acceptance_criteria": [
+        "sample.txt records the selected task ID."
+      ],
+      "verification_commands": [
+        "Select-String -Path .\\sample.txt -Pattern 'TEST-001' -Quiet"
+      ],
+      "allowed_paths": [
+        "sample.txt",
+        "PROJECT_PROGRESS.md",
+        ".loop/**"
+      ],
+      "forbidden_paths": [],
+      "max_attempts": 2,
+      "attempts": 0,
+      "human_approval_required": false,
+      "may_modify_backlog": false,
+      "may_modify_control_plane": false
+    },
+    {
+      "id": "TEST-002",
+      "title": "Write second marker",
+      "description": "Append the selected task ID to sample.txt.",
+      "kind": "implementation",
+      "priority": 2,
+      "status": "READY",
+      "dependencies": [
+        "TEST-001"
+      ],
+      "required": true,
+      "acceptance_criteria": [
+        "sample.txt records the selected task ID."
+      ],
+      "verification_commands": [
+        "Select-String -Path .\\sample.txt -Pattern 'TEST-002' -Quiet"
+      ],
+      "allowed_paths": [
+        "sample.txt",
+        "PROJECT_PROGRESS.md",
+        ".loop/**"
+      ],
+      "forbidden_paths": [],
+      "max_attempts": 2,
+      "attempts": 0,
+      "human_approval_required": false,
+      "may_modify_backlog": false,
+      "may_modify_control_plane": false
+    }
+  ]
+}

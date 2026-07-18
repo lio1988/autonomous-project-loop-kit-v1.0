@@ -1,0 +1,225 @@
+{
+  "package": "autonomous-project-loop-kit",
+  "version": "1.0.0",
+  "created_at_utc": "2026-07-18T00:00:00Z",
+  "purpose": "Repository-native outer loop that repeatedly invokes fresh coding agents until verified project completion or a safe blocked state.",
+  "validation": {
+    "json_parse": "PASS",
+    "json_schema_examples": "PASS",
+    "powershell_tree_sitter_parse": "PASS",
+    "powershell_end_to_end_self_test": "INCLUDED_NOT_RUN_IN_BUILD_ENVIRONMENT_NO_PWSH"
+  },
+  "file_count_excluding_manifest": 42,
+  "files": [
+    {
+      "path": ".agent-loop/integration/AGENTS.block.md",
+      "bytes": 667,
+      "sha256": "ca7e9dbbca6193725fe13b26990da1538bc139c9d353b3273f193ca332dcab23"
+    },
+    {
+      "path": ".agent-loop/integration/CLAUDE.block.md",
+      "bytes": 774,
+      "sha256": "7792e6a086b703ff159a4c342aa5f349d1d6bc468e0d692a17fecb4c023b7b0e"
+    },
+    {
+      "path": ".agent-loop/integration/GEMINI.block.md",
+      "bytes": 384,
+      "sha256": "1dc84932e417280bf92b60ed7409634cb2cd9cad46e973ca224a419ed0ffbc44"
+    },
+    {
+      "path": ".agent-loop/integration/cursor-rule.mdc",
+      "bytes": 721,
+      "sha256": "a6e146a1162cdd6c61c86e4d4ecf14a76c754ad8a949ebc55d005811e3ae99aa"
+    },
+    {
+      "path": ".agent-loop/loop-lib.ps1",
+      "bytes": 65592,
+      "sha256": "3b5643182844af6954ea83638744aede973e2b9ce83cf4cc9c2c50fe66449d03"
+    },
+    {
+      "path": ".agent-loop/prompts/auditor.md",
+      "bytes": 907,
+      "sha256": "005f1758ebae584ad352cfa867274fea5831adb67a909b57b99ff42f6eb00ac8"
+    },
+    {
+      "path": ".agent-loop/prompts/implementer.md",
+      "bytes": 736,
+      "sha256": "f65c5d09ae68283f72f1297209af60df79078af1d01ec0461d5fdb88e80891a6"
+    },
+    {
+      "path": ".agent-loop/schemas/backlog.schema.json",
+      "bytes": 2975,
+      "sha256": "258fd6eefe1d1c961213237847f5209952723de543ef037fca8dc60c26034041"
+    },
+    {
+      "path": ".agent-loop/schemas/config.schema.json",
+      "bytes": 984,
+      "sha256": "24eb5bfce4d0916038c7c6624514b35a9dc3816f9e03f409d93fdc4468273e1a"
+    },
+    {
+      "path": ".agent-loop/schemas/status.schema.json",
+      "bytes": 1427,
+      "sha256": "5b68378122d0097518be8a62209147fa9821477742eecfbd1925be83b6990913"
+    },
+    {
+      "path": ".agent-loop/set-loop-status.ps1",
+      "bytes": 2146,
+      "sha256": "f442c0bafa542d4c1d6de91e9f8bba0d90c6e2fcba65c6730ca09ec9bb1d4c36"
+    },
+    {
+      "path": ".loop/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".loop/README.md",
+      "bytes": 162,
+      "sha256": "165a91366c2099e13cfb3360008ca5e76a2ccb7b1281e55a612f00840fa2ac22"
+    },
+    {
+      "path": ".loop/progress.md",
+      "bytes": 20,
+      "sha256": "878e09d5a0a5506809b894c7f361e8bd218113fc1b3e388fa2b2970253cf4517"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 341,
+      "sha256": "bdb684e44e47a0ecf9f126bc2dfff686c038e13f9c48e0dbe2fc364bd4dc4fe6"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 731,
+      "sha256": "18dfa2925700b0f1da342945b2b3afa1d94803ec61a1a8f6acbecec20b857c51"
+    },
+    {
+      "path": "LOOPS.md",
+      "bytes": 12037,
+      "sha256": "ea6b8e51dedf87f1c81c0ced473a70dd7e038ac0e6187bf8bdd94e186de22276"
+    },
+    {
+      "path": "PROJECT_BACKLOG.json",
+      "bytes": 1647,
+      "sha256": "45680dddd798b66e276e61dbaedfccfae08b633b890ec4b7340439178c238c9c"
+    },
+    {
+      "path": "PROJECT_PROGRESS.md",
+      "bytes": 323,
+      "sha256": "43ff3da13478bd489badd82832754110b9cb650d44cc9935443b76a880e02815"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "bytes": 463,
+      "sha256": "8b14fd7e29e33784fe38a7890eb9dae467784d9a720f4ad72e439a5f8bf3c25d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4951,
+      "sha256": "388fb8d7cc6d73be42f40ad551453217f470f83f141826995988d9bf91bc807e"
+    },
+    {
+      "path": "README_GR.md",
+      "bytes": 3699,
+      "sha256": "259504c0cac31a1e441d0a5866860771e6535d034541fe65b9f009b6aa6a5ed4"
+    },
+    {
+      "path": "VALIDATION.md",
+      "bytes": 829,
+      "sha256": "06a60445f5781b278288c25ade92902cc8d49ec58f5367aebd821ce586248e09"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 911,
+      "sha256": "12f41110e8e0d6e4e5bf90cd75f4f7708951b253a7bb65b363434793d921032e"
+    },
+    {
+      "path": "docs/CUSTOMIZATION.md",
+      "bytes": 855,
+      "sha256": "91351c35216eb468aa4be6a8e2179440bbf0b467cce9443569541ee9b89350b1"
+    },
+    {
+      "path": "docs/PROTOTYPE.md",
+      "bytes": 1132,
+      "sha256": "6df978d8a9ac3721fe67b017d0cfd64e3ac2ced7bc4c9090e9c77595c2fba6ca"
+    },
+    {
+      "path": "docs/PROVIDERS.md",
+      "bytes": 884,
+      "sha256": "35ac0ee07b332f805da3f196916797f0561f8f04d63859214376462cff2ee9e6"
+    },
+    {
+      "path": "docs/REFERENCES.md",
+      "bytes": 478,
+      "sha256": "fa4b36bf6fc86d12bccb0dea11a6770fc27d65725cc7d29a10b69bc724666c0c"
+    },
+    {
+      "path": "docs/SECURITY.md",
+      "bytes": 805,
+      "sha256": "9fdd35cae19dc505e56577fb2162cf6a76b5364fe7de735c03aea75ce1931540"
+    },
+    {
+      "path": "docs/STATUS-CONTRACT.md",
+      "bytes": 527,
+      "sha256": "0c31176e999653092f8b570a3105e569ead63a8fa673e4f93e256c6416ba398a"
+    },
+    {
+      "path": "get-loop-status.ps1",
+      "bytes": 2013,
+      "sha256": "ff3eeb7c4ba3f812bfcde4d6c351bea684d0023cbaa9e29f87e4d5047be6d4cf"
+    },
+    {
+      "path": "install-loop.ps1",
+      "bytes": 5402,
+      "sha256": "a959eda29696a65b37478c1338fd326ba74fcd170573e05d36532204ce8480f6"
+    },
+    {
+      "path": "loop.config.json",
+      "bytes": 2801,
+      "sha256": "76a453cc1c61795384a04c6b049b5b29f5c6e689348970c4b5a6211d1a2476e2"
+    },
+    {
+      "path": "reset-loop-runtime.ps1",
+      "bytes": 2170,
+      "sha256": "54ea1479f29bc36ffcbb5d355cff2d107db931e840a32b331ce7602046be0311"
+    },
+    {
+      "path": "run-loop.ps1",
+      "bytes": 973,
+      "sha256": "47e855e807672f11378d3fa04174e7ac861791dd5f0ceb28b9bc4c1cd68f3582"
+    },
+    {
+      "path": "stop-loop.ps1",
+      "bytes": 637,
+      "sha256": "c0515dea33fac9105efb28cd65159364490f91e90f109fed3b7c842400873431"
+    },
+    {
+      "path": "tests/PROJECT_BACKLOG.selftest.json",
+      "bytes": 1728,
+      "sha256": "9b0db2c42ac2867ea21c19346757f3d57e62c62be42750640c5e9a330db11560"
+    },
+    {
+      "path": "tests/loop.config.selftest.json",
+      "bytes": 3052,
+      "sha256": "189b5a22ba7545c356bbf13e5e39c6ba0aec5933e9fe631c17c1a498df3ce92b"
+    },
+    {
+      "path": "tests/mock-agent.ps1",
+      "bytes": 1051,
+      "sha256": "8826ac36db7f210d2c018a326cecb752428ded231c5ab16999499bbe8e8ed1a4"
+    },
+    {
+      "path": "tests/self-test.ps1",
+      "bytes": 2405,
+      "sha256": "bb30606be0669f0a6535c045043335efac0dd42d8783e4f2de64dcd3eeac75af"
+    },
+    {
+      "path": "validate-loop.ps1",
+      "bytes": 4152,
+      "sha256": "6ea71febb54f64ed8e7ea691779a1bf0114734ae371e7d6ae1099ec6dfcdab4e"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "project_name": "REPLACE_WITH_PROJECT_NAME",
+  "project_goal": "Complete the project according to canonical plans, architecture, tests, documentation, and release gates.",
+  "tasks": [
+    {
+      "id": "BOOTSTRAP-001",
+      "title": "Build the verified project-completion backlog",
+      "description": "Read canonical plans, current implementation, tests, documentation, and history. Add a finite dependency-aware list of bounded remaining tasks. Do not change source code. Preserve this bootstrap task.",
+      "kind": "planning",
+      "priority": 0,
+      "status": "READY",
+      "dependencies": [],
+      "required": true,
+      "acceptance_criteria": [
+        "Canonical project instructions and plans were read.",
+        "Remaining work is decomposed into bounded unique tasks.",
+        "Dependencies and priorities are explicit.",
+        "Every implementation task has objective acceptance criteria.",
+        "Verification commands are added wherever technically possible.",
+        "Human-approval tasks are explicit.",
+        "No source code was modified."
+      ],
+      "verification_commands": [
+        "pwsh -NoProfile -File .\\validate-loop.ps1 -BacklogOnly"
+      ],
+      "allowed_paths": [
+        "PROJECT_BACKLOG.json",
+        "PROJECT_PROGRESS.md",
+        ".loop/**"
+      ],
+      "forbidden_paths": [],
+      "max_attempts": 2,
+      "attempts": 0,
+      "human_approval_required": false,
+      "may_modify_backlog": true,
+      "may_modify_control_plane": false,
+      "notes": "For maximum assurance, human-review the generated backlog before a long unattended run."
+    }
+  ]
+}

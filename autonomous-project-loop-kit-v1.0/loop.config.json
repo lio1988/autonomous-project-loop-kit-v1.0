@@ -1,0 +1,114 @@
+{
+  "_comment": "Edit before a real unattended run. Explanatory JSON keys begin with _comment.",
+  "schema_version": "1.0",
+  "project_name": "REPLACE_WITH_PROJECT_NAME",
+  "provider_sequence": [
+    "codex"
+  ],
+  "audit_provider_sequence": [
+    "codex"
+  ],
+  "max_iterations": 100,
+  "max_total_hours": 12,
+  "iteration_timeout_minutes": 90,
+  "verification_timeout_minutes": 30,
+  "sleep_between_iterations_seconds": 5,
+  "max_consecutive_runner_failures": 3,
+  "completion_confirmation_runs": 2,
+  "require_any_verification_evidence": true,
+  "require_clean_start": true,
+  "auto_create_loop_branch": true,
+  "loop_branch_prefix": "agent-loop/",
+  "protected_branches": [
+    "main",
+    "master",
+    "develop",
+    "release"
+  ],
+  "allow_push": false,
+  "allow_merge": false,
+  "allow_remote_operations": false,
+  "allow_agent_commits": false,
+  "always_allowed_paths": [
+    ".loop/**",
+    "PROJECT_PROGRESS.md"
+  ],
+  "protected_paths": [
+    ".env",
+    ".env.*",
+    "**/.env",
+    "**/.env.*",
+    "**/secrets/**",
+    "**/*secret*",
+    "**/*credential*",
+    "**/*.pem",
+    "**/*.key",
+    ".git/**"
+  ],
+  "control_plane_paths": [
+    "LOOPS.md",
+    "loop.config.json",
+    "run-loop.ps1",
+    "validate-loop.ps1",
+    "stop-loop.ps1",
+    ".agent-loop",
+    "AGENTS.md",
+    "CLAUDE.md",
+    ".cursor/rules/autonomous-project-loop.mdc",
+    ".loop/run-state.json",
+    ".loop/selected-task.json",
+    ".loop/current-prompt.md",
+    ".loop/ACTIVE"
+  ],
+  "global_preflight_commands": [
+    "pwsh -NoProfile -File .\\validate-loop.ps1",
+    "git diff --check"
+  ],
+  "global_post_iteration_commands": [
+    "pwsh -NoProfile -File .\\validate-loop.ps1 -BacklogOnly",
+    "git diff --check"
+  ],
+  "global_completion_commands": [],
+  "provider_options": {
+    "codex": {
+      "command": "codex",
+      "model": "",
+      "implementation_sandbox": "workspace-write",
+      "audit_sandbox": "workspace-write",
+      "ephemeral": true,
+      "extra_implementation_args": [],
+      "extra_audit_args": []
+    },
+    "claude": {
+      "command": "claude",
+      "model": "",
+      "max_turns": 100,
+      "unsafe_skip_permissions": false,
+      "allowed_tools": [],
+      "disallowed_tools": [
+        "Bash(git push:*)",
+        "Bash(git pull:*)",
+        "Bash(git fetch:*)",
+        "Bash(git merge:*)",
+        "Bash(git rebase:*)",
+        "Bash(git reset:*)",
+        "Bash(git commit:*)"
+      ],
+      "extra_implementation_args": [],
+      "extra_audit_args": []
+    },
+    "cursor": {
+      "command": "cursor-agent",
+      "model": "",
+      "force_implementation": true,
+      "extra_implementation_args": [],
+      "extra_audit_args": []
+    },
+    "custom": {
+      "enabled": false,
+      "command": "",
+      "implementation_args": [],
+      "audit_args": []
+    }
+  }
+}
